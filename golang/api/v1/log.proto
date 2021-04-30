@@ -1,0 +1,10 @@
+syntax = "proto3";
+package log.v1;
+
+// package named to prevent name clashes between protocol message types that have the same name
+option go_package = "Distributed-Architecture/golang/api/log_v1";
+
+message Record {
+    bytes value = 1;
+    uint64 offset = 2;
+}
